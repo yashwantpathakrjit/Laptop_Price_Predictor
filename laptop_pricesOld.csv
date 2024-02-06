@@ -1,0 +1,63 @@
+RAM,SSD,Brand,Processor,Price
+4,256,HP,AMD Ryzen 3,28000
+4,256,Asus,Intel i3,25000
+8,512,Acer,AMD Ryzen 3,35000
+4,1024,Lenovo,AMD Ryzen 5,38000
+16,1024,Dell,Intel i3,41000
+4,1024,Dell,AMD Ryzen 5,36500
+4,512,HP,Intel i3,30000
+16,256,Acer,Intel i3,32500
+16,1024,Acer,Intel i3,37500
+4,512,HP,AMD Ryzen 5,31500
+4,256,Acer,AMD Ryzen 5,32000
+8,256,Dell,AMD Ryzen 3,32000
+8,512,HP,Intel i5,38500
+8,512,Dell,AMD Ryzen 3,34500
+4,512,Dell,AMD Ryzen 5,36000
+32,512,Lenovo,Intel i7,65000
+4,512,HP,AMD Ryzen 5,35500
+8,1024,Lenovo,Intel i7,66500
+16,1024,Asus,Intel i5,41500
+8,128,Lenovo,Intel i5,36500
+32,512,Acer,Intel i5,42500
+16,256,Lenovo,AMD Ryzen 5,32000
+16,1024,Dell,Intel i5,42500
+4,1024,Dell,Intel i5,41000
+16,128,Dell,Intel i5,39600
+8,256,Lenovo,Intel i3,27500
+4,512,Acer,AMD Ryzen 3,31000
+8,1024,Acer,Intel i5,41000
+4,256,Lenovo,AMD Ryzen 5,32000
+16,512,HP,Intel i7,57500
+8,256,HP,Intel i7,56500
+4,512,Asus,Intel i5,39000
+8,256,Asus,AMD Ryzen 3,31000
+16,512,Asus,AMD Ryzen 5,38000
+32,1024,Dell,AMD Ryzen 5,42000
+16,1024,Lenovo,Intel i7,61000
+4,1024,Asus,Intel i3,32500
+32,512,HP,AMD Ryzen 5,41500
+16,1024,Acer,AMD Ryzen 5,44500
+16,256,Acer,Intel i7,59500
+16,512,Dell,AMD Ryzen 3,34000
+8,1024,Asus,Intel i3,34500
+4,1024,HP,AMD Ryzen 3,31500
+4,512,Lenovo,Intel i3,31000
+4,1024,Asus,Intel i3,33000
+32,1024,Dell,AMD Ryzen 5,44700
+8,256,Acer,Intel i5,39500
+8,256,Asus,AMD Ryzen 5,31000
+4,128,HP,AMD Ryzen 3,28000
+8,512,HP,AMD Ryzen 5,38000
+4,256,HP,Intel i3,28000
+8,512,Dell,Intel i3,30000
+16,256,Lenovo,AMD Ryzen 5,36000
+4,1024,Lenovo,Intel i3,35000
+16,512,Acer,AMD Ryzen 3,41000
+16,256,Asus,Intel i7,51000
+4,256,Dell,AMD Ryzen 3,32000
+16,256,Lenovo,Intel i7,44000
+8,1024,Lenovo,Intel i3,36500
+8,128,Dell,Intel i3,24500
+4,128,Dell,AMD Ryzen 3,24000
+32,512,Acer,AMD Ryzen 5,45000

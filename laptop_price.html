@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Laptop Price Predictor</h1>
+        <div class="input-group">
+            <label for="ram">RAM (GB):</label>
+            <select id="ram">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="ssd">SSD (GB):</label>
+            <select id="ssd">
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="512">512</option>
+                <option value="1024">1024</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="brand">Brand:</label>
+            <select id="brand">
+                <option value="Asus">Asus</option>
+                <option value="Dell">Dell</option>
+                <option value="HP">HP</option>
+                <option value="Lenovo">Lenovo</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="processor">Processor:</label>
+            <select id="processor">
+                <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                <option value="Intel i3">Intel i3</option>
+                <option value="Intel i5">Intel i5</option>
+                <option value="Intel i7">Intel i7</option>
+            </select>
+        </div>
+        <button onclick="predictPrice()">Predict Price</button>
+        <div class="output">
+            <h2>Predicted Price: <span id="predictedPrice"></span></h2>
+        </div>
+    </div>
+
+    <script>
+        function predictPrice() {
+            var ram = parseInt(document.getElementById('ram').value);
+            var ssd = parseInt(document.getElementById('ssd').value);
+            var brand = document.getElementById('brand').value;
+            var processor = document.getElementById('processor').value;
+
+            // Coefficients obtained from the regression model
+            var intercept = 28196.128;
+            var ramCoeff = 239.142;
+            var ssdCoeff = 8.587;
+            var brandCoeff = getBrandCoeff(brand);
+            var processorCoeff = getProcessorCoeff(processor);
+
+            // Calculate the predicted price
+            var predictedPrice = intercept + (ram * ramCoeff) + (ssd * ssdCoeff) + brandCoeff + processorCoeff;
+
+            document.getElementById('predictedPrice').textContent = 'Rs.' + predictedPrice.toFixed(2);
+        }
+
+        function getBrandCoeff(brand) {
+            switch (brand) {
+                case 'Asus':
+                    return -3117.661;
+                case 'Dell':
+                    return -2054.485;
+                case 'HP':
+                    return -1925.683;
+                case 'Lenovo':
+                    return -1961.304;
+                default:
+                    return 0; // Default coefficient if brand is not found
+            }
+        }
+
+        function getProcessorCoeff(processor) {
+            switch (processor) {
+                case 'AMD Ryzen 5':
+                    return 2511.349;
+                case 'Intel i3':
+                    return -1765.940;
+                case 'Intel i5':
+                    return 5446.647;
+                case 'Intel i7':
+                    return 23057.631;
+                default:
+                    return 0; // Default coefficient if processor is not found
+            }
+        }
+    </script>
+</body>
+
+</html>
